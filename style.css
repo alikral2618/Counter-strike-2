@@ -1,44 +1,74 @@
 body{
-  font-family: Arial;
-  background: linear-gradient(180deg,#020617,#0f172a);
+  margin:0;
+  font-family:Arial;
+  background:#020617;
   color:white;
-  text-align:center;
 }
 
-.menu{
-  margin:20px;
+.navbar{
+  background:#020617;
+  padding:15px;
+  border-bottom:1px solid #1e293b;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-button{
-  padding:10px 20px;
-  margin:5px;
+.menu button{
   background:#22c55e;
   border:none;
+  padding:8px 15px;
+  margin-left:5px;
   border-radius:8px;
   color:white;
   cursor:pointer;
 }
 
-textarea,input{
-  width:320px;
+.page{
+  padding:20px;
+  text-align:center;
+}
+
+.box{
+  background:#0f172a;
+  padding:20px;
+  border-radius:12px;
+  width:350px;
+  margin:20px auto;
+}
+
+input,textarea{
+  width:90%;
   padding:10px;
-  margin:8px;
+  margin:5px;
   border-radius:8px;
   border:none;
 }
 
-.page{
-  margin-top:20px;
-}
-
-.hidden{
-  display:none;
-}
-
 .card{
-  background:#1e293b;
-  margin:15px auto;
+  background:#0f172a;
   padding:15px;
-  width:420px;
   border-radius:12px;
+  width:420px;
+  margin:15px auto;
+  position:relative;
+}
+
+.delete{
+  position:absolute;
+  right:10px;
+  top:10px;
+  background:red;
+}
+
+.hidden{display:none;}
+
+#toast{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#22c55e;
+  padding:10px 20px;
+  border-radius:8px;
+  display:none;
 }
