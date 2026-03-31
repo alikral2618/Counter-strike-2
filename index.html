@@ -2,46 +2,52 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Melike ve ali mertin cs2 günlüğü</title>
+<title>CS2 Archive</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Melike ve ali mertin cs2 günlüğü</h1>
-
-<div class="menu">
-  <button onclick="showPage('journal')">Maç kazanma oranı</button>
-  <button onclick="showPage('notes')">Günlük maçlar</button>
-  <button onclick="showPage('clips')">En iyi vuruşlar</button>
+<div class="navbar">
+  <h1>CS2 ARCHIVE</h1>
+  <div class="menu">
+    <button onclick="showPage('journal')">Günlük</button>
+    <button onclick="showPage('notes')">Notlar</button>
+    <button onclick="showPage('clips')">Klipler</button>
+  </div>
 </div>
 
-<!-- GÜNLÜK SAYFASI -->
-<div id="journal" class="page">
-  <h2>Günlük Kayıt</h2>
-  <input type="date" id="j_date">
-  <input type="time" id="j_time">
-  <textarea id="j_note" placeholder="Bugün CS2'de neler oldu?"></textarea>
-  <button onclick="saveJournal()">Kaydet</button>
+<div id="toast"></div>
 
+<!-- JOURNAL -->
+<div id="journal" class="page">
+  <h2>📅 Günlük</h2>
+  <div class="box">
+    <input type="date" id="j_date">
+    <input type="time" id="j_time">
+    <textarea id="j_note" placeholder="Bugün CS2'de neler oldu?"></textarea>
+    <button onclick="saveJournal()">Kaydet</button>
+  </div>
   <div id="journalList"></div>
 </div>
 
-<!-- NOTLAR SAYFASI -->
+<!-- NOTES -->
 <div id="notes" class="page hidden">
-  <h2>Notlar</h2>
-  <textarea id="noteText" placeholder="Kalıcı not ekle"></textarea>
-  <button onclick="saveNote()">Not Kaydet</button>
-
+  <h2>📝 Notlar</h2>
+  <div class="box">
+    <textarea id="noteText" placeholder="Not yaz"></textarea>
+    <button onclick="saveNote()">Kaydet</button>
+  </div>
   <div id="notesList"></div>
 </div>
 
-<!-- KLİPLER SAYFASI -->
+<!-- CLIPS -->
 <div id="clips" class="page hidden">
-  <h2>Klipler</h2>
-  <input type="text" id="clipLink" placeholder="YouTube klip linki">
-  <button onclick="saveClip()">Klip Kaydet</button>
-
+  <h2>🎬 Klipler</h2>
+  <div class="box">
+    <input type="text" id="clipLink" placeholder="YouTube link">
+    <button onclick="saveClip()">Kaydet</button>
+  </div>
   <div id="clipList"></div>
 </div>
 
