@@ -8,18 +8,42 @@
 
 <body>
 
-<h1>🎮 CS2 Günlük & Klip Arşivi</h1>
+<h1>🎮 CS2 ARŞİV</h1>
 
-<div class="form">
-  <input type="date" id="date">
-  <input type="time" id="time">
-  <textarea id="note" placeholder="Bugün CS2'de neler oldu?"></textarea>
-  <input type="text" id="video" placeholder="YouTube klip linki (opsiyonel)">
-  <button onclick="saveEntry()">Kaydet</button>
+<div class="menu">
+  <button onclick="showPage('journal')">📅 Günlük</button>
+  <button onclick="showPage('notes')">📝 Notlar</button>
+  <button onclick="showPage('clips')">🎬 Klipler</button>
 </div>
 
-<h2>Kayıtlar</h2>
-<div id="entries"></div>
+<!-- GÜNLÜK SAYFASI -->
+<div id="journal" class="page">
+  <h2>Günlük Kayıt</h2>
+  <input type="date" id="j_date">
+  <input type="time" id="j_time">
+  <textarea id="j_note" placeholder="Bugün CS2'de neler oldu?"></textarea>
+  <button onclick="saveJournal()">Kaydet</button>
+
+  <div id="journalList"></div>
+</div>
+
+<!-- NOTLAR SAYFASI -->
+<div id="notes" class="page hidden">
+  <h2>Notlar</h2>
+  <textarea id="noteText" placeholder="Kalıcı not ekle"></textarea>
+  <button onclick="saveNote()">Not Kaydet</button>
+
+  <div id="notesList"></div>
+</div>
+
+<!-- KLİPLER SAYFASI -->
+<div id="clips" class="page hidden">
+  <h2>CS2 Klip Arşivi</h2>
+  <input type="text" id="clipLink" placeholder="YouTube klip linki">
+  <button onclick="saveClip()">Klip Kaydet</button>
+
+  <div id="clipList"></div>
+</div>
 
 <script src="app.js"></script>
 </body>
