@@ -8,26 +8,18 @@
 
 <body>
 
-<div id="loginPage">
-  <h1>CS2 Günlük</h1>
-  <input type="password" id="password" placeholder="Şifre">
-  <button onclick="login()">Giriş</button>
+<h1>🎮 CS2 Günlük & Klip Arşivi</h1>
+
+<div class="form">
+  <input type="date" id="date">
+  <input type="time" id="time">
+  <textarea id="note" placeholder="Bugün CS2'de neler oldu?"></textarea>
+  <input type="text" id="video" placeholder="YouTube klip linki (opsiyonel)">
+  <button onclick="saveEntry()">Kaydet</button>
 </div>
 
-<div id="app" class="hidden">
-  <h1>🎮 CS2 Günlük</h1>
-
-  <div class="form">
-    <input type="date" id="date">
-    <input type="time" id="time">
-    <textarea id="note" placeholder="Bugün neler oldu?"></textarea>
-    <input type="text" id="video" placeholder="YouTube video linki">
-    <button onclick="saveEntry()">Kaydet</button>
-  </div>
-
-  <h2>Kayıtlar</h2>
-  <div id="entries"></div>
-</div>
+<h2>Kayıtlar</h2>
+<div id="entries"></div>
 
 <script src="app.js"></script>
 </body>
