@@ -5,44 +5,39 @@ body{
   text-align:center;
 }
 
-h1{
-  color:#22c55e;
-  margin-top:30px;
-}
-
-.form{
-  background:#1e293b;
-  padding:20px;
-  width:360px;
-  margin:20px auto;
-  border-radius:15px;
-}
-
-input, textarea{
-  width:90%;
-  padding:10px;
-  margin:5px;
-  border-radius:8px;
-  border:none;
-}
-
-textarea{
-  height:80px;
+.menu{
+  margin:20px;
 }
 
 button{
-  padding:10px 25px;
+  padding:10px 20px;
+  margin:5px;
   background:#22c55e;
   border:none;
   border-radius:8px;
   color:white;
   cursor:pointer;
-  margin-top:10px;
 }
 
-.entry{
+textarea,input{
+  width:320px;
+  padding:10px;
+  margin:8px;
+  border-radius:8px;
+  border:none;
+}
+
+.page{
+  margin-top:20px;
+}
+
+.hidden{
+  display:none;
+}
+
+.card{
   background:#1e293b;
-  margin:20px auto;
+  margin:15px auto;
   padding:15px;
   width:420px;
   border-radius:12px;
